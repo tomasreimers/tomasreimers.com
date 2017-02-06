@@ -1,0 +1,74 @@
+(function () {
+  // RESIZE LOGIC
+  const resize_handler = function () {
+    const canvas = document.getElementById('stage');
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  };
+
+  window.addEventListener('resize', resize_handler, false);
+  resize_handler();
+
+  // CIRCLES ITERATIVELY
+  const add_circle_coeff = 0.25;
+  const circle_min_radius = 10;
+  const circle_max_radius = 100;
+  const circle_min_speed = 0.001;
+  const circle_max_speed = 0.01;
+  const starting_opacity = 0.2;
+  const fps = 60;
+
+  let last_time_updated = Date.now();
+  let circles = [];
+
+  // REDRAW HANDLER
+  const redraw_handler = function () {
+    const canvas = document.getElementById('stage');
+    const ctx = canvas.getContext("2d");
+
+    // clear the space
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // check if we need to push the frame forward
+    if (Date.now() - last_time_updated > (1. / fps)) {
+      last_time_updated = Date.now();
+
+      // update the circles
+      let new_circles = [];
+      for (let i = 0; i < circles.length; i++) {
+        let circle = circles[i];
+        circle.timing += circle.speed;
+        if (circle.timing <= 1) {
+          new_circles.push(circle);
+        }
+      }
+      circles = new_circles;
+
+      // randomly choose to create a circle
+      if (Math.random() < add_circle_coeff) {
+        circles.push({
+          x: canvas.width * Math.random(),
+          y: canvas.height * Math.random(),
+          radius: circle_min_radius + Math.random() * (circle_max_radius - circle_min_radius),
+          timing: 0,
+          speed: circle_min_speed + Math.random() * (circle_max_speed - circle_min_speed),
+        });
+      }
+    }
+
+    // draw the circles
+    for (let i = 0; i < circles.length; i++) {
+      let circle = circles[i];
+      ctx.beginPath();
+      ctx.fillStyle = "rgba(0, 0, 0, " + (1 - circle.timing) * starting_opacity + ")";
+      ctx.arc(circle.x, circle.y, circle.radius * circle.timing, 0, 2 * Math.PI, false);
+      ctx.fill();
+    }
+
+    // schedule next draw
+    window.requestAnimationFrame(redraw_handler);
+  };
+
+  redraw_handler();
+})();
