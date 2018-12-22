@@ -2,64 +2,41 @@
 <html lang="">
   <head>
     <meta charset="utf-8">
-    <meta name="description" content="Hi! My name is Tomas. I am a software developer, and this is what I do.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Tomas Reimers' Portfolio</title>
+    <meta name="description" content="Tomas Reimers | Software Engineer">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tomas Reimers</title>
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
 
-    <!-- build:css styles/vendor.css -->
-    <!-- bower:css -->
-    <!-- endbower -->
-    <!-- endbuild -->
-
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-
-    <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
-
   </head>
   <body>
-    <!--[if lt IE 10]>
+    <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div class="theater">
-      <canvas id="stage"></canvas>
-      <div class="curtain">
-        <h1>Hello</h1>
-        <h2>My name is Tomas.</h2>
-        <div class="buttons">
-          <a href="https://www.linkedin.com/in/tomasreimers" class="button"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-          <a href="https://github.com/tomasreimers" class="button"><i class="fa fa-github" aria-hidden="true"></i></a>
-          <a href="https://medium.com/@tomasreimers" class="button"><i class="fa fa-medium" aria-hidden="true"></i></a>
-          <a href="https://twitter.com/tomasreimers" class="button"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-        </div>
-        <p>I'm a software engineer, and this is what I do.</p>
+    <div class="container">
+      <div class="name">Tomas Reimers</div>
+      <div class="buttons">
+        <a href="https://www.linkedin.com/in/tomasreimers" class="button"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+        <a href="https://github.com/tomasreimers" class="button"><i class="fab fa-github" aria-hidden="true"></i></a>
+        <a href="https://medium.com/@tomasreimers" class="button"><i class="fab fa-medium" aria-hidden="true"></i></a>
+        <a href="https://twitter.com/tomasreimers" class="button"><i class="fab fa-twitter" aria-hidden="true"></i></a>
       </div>
+      <div class="title">Software Engineer</div>
+      <div class="location">New York, NY</div>
     </div>
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-98117292-2"></script>
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-      ga('create', 'UA-98117292-2', 'auto');
-      ga('send', 'pageview');
-
+      gtag('config', 'UA-98117292-2');
     </script>
 
-    <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
-    <!-- endbower -->
-    <!-- endbuild -->
-
-    <!-- build:js scripts/bundle.js -->
-    <script src="scripts/bundle.js"></script>
-    <!-- endbuild -->
+    <script src="scripts/main.js"></script>
   </body>
 </html>

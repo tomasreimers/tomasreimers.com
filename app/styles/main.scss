@@ -1,6 +1,7 @@
-// bower:scss
-@import "bower_components/font-awesome/scss/font-awesome.scss";
-// endbower
+$fa-font-path: "../../fonts/fontawesome";
+@import 'fontawesome/fontawesome';
+@import 'fontawesome/regular';
+@import 'fontawesome/brands';
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -15,103 +16,52 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
-  font-family: 'Source Sans Pro', sans-serif;
 }
 
-.theater {
-  background-image: linear-gradient(to bottom, #000033, #000066);
-  position: relative;
-  font-size: 0;
-  overflow: hidden;
+body {
+  background: #FFFFFF;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
-.curtain {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.container {
   text-align: center;
-  padding: 100px 40px;
-  box-sizing: border-box;
-  font-size: 16px;
-  color: #FFFFFF;
-}
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
 
-.curtain h1 {
-  color: #FFFFFF;
-  text-shadow: 0 2px 0 #000000;
-  font-size: 72px;
-  margin: 0;
-}
-
-.curtain h2 {
-  color: #FFFFFF;
-  text-shadow: 0 2px 0 #000000;
-  font-size: 24px;
-  margin: 0;
-}
-
-.curtain p {
-  color: #FFFFFF;
-  text-shadow: 0 2px 0 #000000;
-  font-size: 20px;
-  margin: 0;
-  opacity: 0.4;
-}
-
-.buttons {
-  margin: 20px auto;
-}
-
-.button {
-  display: inline-block;
-  border: 1px solid rgba(255, 255, 255, 1);
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
-  margin: 10px;
-  padding: 10px;
-  box-sizing: border-box;
-  line-height: 20px;
-}
-
-.button:link,
-.button:visited {
-  color: #FFFFFF;
-  text-decoration: none;
-}
-
-.button:hover {
-  opacity: 0.6;
-  animation: twist 1s infinite linear;
-}
-
-@keyframes twist {
-  0% {
-    transform: rotate(0deg);
+  .name {
+    font-size: 36px;
+    margin: 12px;
   }
 
-  25% {
-    transform: rotate(-20deg);
+  .buttons {
+    font-size: 32px;
+    margin: 12px;
+
+    a {
+      color: #000000;
+      text-decoration: none;
+
+      &:hover {
+        color: #AAAAAA;
+      }
+
+      i {
+        margin: 12px;
+      }
+    }
   }
 
-  75% {
-    transform: rotate(20deg);
+  .title {
+    font-size: 20px;
+    margin: 6px;
   }
 
-  100% {
-    transform: rotate(0deg);
+  .location {
+    font-size: 20px;
+    font-style: italic;
+    margin: 6px;
   }
-}
-
-.button:active {
-  opacity: 0.8;
-}
-
-.wrapper {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 40px;
-  background-color: #FFFFFF;
 }
