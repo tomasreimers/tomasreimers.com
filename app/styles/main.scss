@@ -16,7 +16,7 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
-  background: url('../images/groovepaper.png') repeat center center;
+  // background: url('../images/groovepaper.png') repeat center center;
 }
 
 body {
@@ -35,10 +35,18 @@ body {
     font-size: 60px;
     line-height: 1.2em;
     margin: 12px;
-    font-family: 'Rock Salt', cursive;
+    font-family: 'Source Serif Pro', serif;
+  }
+
+  .location {
+    font-size: 30px;
+    line-height: 1.2em;
+    margin: 12px;
+    font-family: 'Source Serif Pro', serif;
   }
 
   .buttons {
+    display: none;
     font-size: 32px;
     margin: 12px;
     text-align: center;
@@ -59,12 +67,6 @@ body {
 
   .title {
     font-size: 20px;
-    margin: 6px;
-  }
-
-  .location {
-    font-size: 20px;
-    font-style: italic;
     margin: 6px;
   }
 }
