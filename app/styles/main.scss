@@ -116,6 +116,15 @@ body {
         }
       }
 
+      &.button-sv {
+        &:hover {
+          color: #fc5200;
+        }
+        &::before {
+          background-color: rgba(#fc5200, 0.2);
+        }
+      }
+
       &.button-ig {
         &:hover {
           color: #dd2a7b;
