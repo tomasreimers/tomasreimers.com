@@ -1,7 +1,8 @@
 $fa-font-path: "../../fonts/fontawesome";
-@import 'fontawesome/fontawesome';
-@import 'fontawesome/regular';
-@import 'fontawesome/brands';
+@import "fontawesome/fontawesome";
+// @import "fontawesome/regular";
+@import "fontawesome/solid";
+@import "fontawesome/brands";
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -32,41 +33,123 @@ body {
   width: 100%;
 
   .name {
-    font-size: 60px;
+    font-size: 64px;
     line-height: 1.2em;
-    margin: 12px;
-    font-family: 'Source Serif Pro', serif;
+    margin: 16px;
+    font-family: "Source Serif Pro", serif;
   }
 
   .location {
-    font-size: 30px;
+    font-size: 32px;
     line-height: 1.2em;
-    margin: 12px;
-    font-family: 'Source Serif Pro', serif;
+    margin: 16px;
+    font-family: "Source Serif Pro", serif;
   }
 
   .buttons {
-    display: none;
-    font-size: 32px;
-    margin: 12px;
+    font-size: 24px;
+    margin: 16px;
+    margin-top: 64px;
     text-align: center;
 
-    a {
+    .buttons-row {
+      display: inline-block;
+    }
+
+    a.button {
       color: #000000;
       text-decoration: none;
+      position: relative;
+      transition: color 300ms ease-in-out;
+
+      &::before {
+        content: " ";
+        z-index: 1;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        transition: width 200ms ease-in-out, height 200ms ease-in-out,
+          opacity 200ms ease-in-out;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        border-radius: 20px;
+        background-color: #cccccc;
+      }
+
+      &.button-li {
+        &:hover {
+          color: #0077b5;
+        }
+        &::before {
+          background-color: rgba(0, 119, 181, 0.2);
+        }
+      }
+
+      &.button-gh {
+        &:hover {
+          color: #6cc644;
+        }
+        &::before {
+          background-color: rgba(#6cc644, 0.2);
+        }
+      }
+
+      &.button-id {
+        &:hover {
+          color: #ffdb65;
+        }
+        &::before {
+          background-color: rgba(#ffdb65, 0.2);
+        }
+      }
+
+      &.button-tw {
+        &:hover {
+          color: #1da1f2;
+        }
+        &::before {
+          background-color: rgba(29, 161, 242, 0.2);
+        }
+      }
+
+      &.button-ig {
+        &:hover {
+          color: #dd2a7b;
+        }
+        &::before {
+          background-color: rgba(#dd2a7b, 0.2);
+        }
+      }
+
+      &.button-so {
+        &:hover {
+          color: #f48024;
+        }
+        &::before {
+          background-color: rgba(#f48024, 0.2);
+        }
+      }
 
       &:hover {
-        color: #AAAAAA;
+        color: #aaaaaa;
+
+        &::before {
+          width: 40px;
+          height: 40px;
+          opacity: 1;
+        }
       }
 
-      i {
-        margin: 12px;
+      & i {
+        z-index: 2;
+        position: relative;
+        margin: 16px;
+        top: 1px;
       }
     }
-  }
-
-  .title {
-    font-size: 20px;
-    margin: 6px;
   }
 }
