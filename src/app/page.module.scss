@@ -27,14 +27,16 @@
   a.link {
     color: #000000;
     font-weight: 800;
-    text-transform: uppercase;
+    text-transform: lowercase;
     letter-spacing: -0.05em;
 
     text-decoration: none;
-    transition: color 200ms ease-in-out;
+    transition: 200ms ease-in-out;
+    opacity: 0.2;
 
     &:hover {
-      transition: color 0ms;
+      opacity: 1;
+      transition: 0ms;
     }
 
     &.link-li {
