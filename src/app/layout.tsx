@@ -19,14 +19,14 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         {children}
-        <Script strategy='afterInteractive' src="https://www.googletagmanager.com/gtag/js?id=UA-98117292-2" />
+        <Script strategy='afterInteractive' src="https://www.googletagmanager.com/gtag/js?id=G-1713H2NT6Y" />
         <Script strategy='afterInteractive' dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-
-            gtag('config', 'UA-98117292-2');
+          
+            gtag('config', 'G-1713H2NT6Y');        
           `}} />
       </body>
     </html>
