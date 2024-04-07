@@ -16,6 +16,8 @@ body {
   height: -webkit-fill-available;
   overflow: hidden;
   font-family: Helvetica, Arial, sans-serif;
+
+  // Needs to match ./nightsky/config.tsx#darkSkyColor
   background: #020617;
 }
 

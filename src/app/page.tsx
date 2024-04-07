@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 import s from './page.module.scss'
-import CanvasBackground from './canvas'
+import CanvasBackground from './nightsky/canvas'
 
 export default function Home() {
   return (
