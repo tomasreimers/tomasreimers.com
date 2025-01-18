@@ -52,8 +52,8 @@ export class Animator {
       const brightness1 = Math.random();
       const brightness2 = Math.random();
       const period = 10 + Math.random() * 10;
-      const initialFadeDuration = Math.random() * 30;
-      const initialFadeOffset = Math.random() * 30;
+      const initialFadeDuration = Math.random() * 5;
+      const initialFadeOffset = Math.random() * 5;
       const offset = Math.random() * 20;
       const color = STAR_COLORS[Math.floor(Math.random() * STAR_COLORS.length)];
 

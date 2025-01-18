@@ -11,4 +11,4 @@ export const STAR_COLORS = [
 ];
 export const DARK_SKY_COLOR = "#020617";
 export const LIGHT_SKY_COLOR = "#0f172a";
-export const BACKGROUND_FADE_IN_SECONDS = 10;
+export const BACKGROUND_FADE_IN_SECONDS = 5;
