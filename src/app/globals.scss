@@ -1,7 +1,3 @@
-:root {
-  --max-width: 1200px;
-}
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -10,12 +6,24 @@
 
 html,
 body {
-  width: 100vw;
-  height: 100vh;
-  // On iPhones, 100vh causes the content to expand to fill space behind the browser chrome (leading to scroll)
-  height: -webkit-fill-available;
-  overflow: hidden;
+  color: #98a5bf;
   font-family: Helvetica, Arial, sans-serif;
+  line-height: auto;
+
+  min-width: 100vw;
+  min-height: 100vh;
+
+  // On iPhones, 100vh causes the content to expand to fill space behind the browser chrome (leading to scroll)
+  @media (max-width: 600px) {
+    min-height: -webkit-fill-available;
+  }
+
+  font-size: 0;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   // Needs to match ./nightsky/config.tsx#darkSkyColor
   background: #020617;

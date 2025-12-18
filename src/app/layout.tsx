@@ -1,9 +1,9 @@
 import './globals.scss'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Lora } from 'next/font/google'
 import Script from 'next/script'
 
-const inter = Inter({ subsets: ['latin'] })
+const font = Lora({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Tomas Reimers',
@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={font.className}>
         {children}
         <Script strategy='afterInteractive' src="https://www.googletagmanager.com/gtag/js?id=G-1713H2NT6Y" />
         <Script strategy='afterInteractive' dangerouslySetInnerHTML={{
