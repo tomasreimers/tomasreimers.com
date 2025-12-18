@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "push-no-force": "git subtree push --prefix dist origin gh-pages",
-    "push": "git push origin `git subtree split --prefix dist master`:gh-pages --force"
+    "push": "git push origin `git subtree split --prefix dist main`:refs/heads/gh-pages --force"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.7",
