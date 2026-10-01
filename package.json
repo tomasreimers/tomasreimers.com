@@ -5,24 +5,24 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next start"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.4.0",
     "@react-three/postprocessing": "^3.0.4",
-    "@types/node": "20.6.2",
-    "@types/react": "18.2.21",
-    "@types/react-dom": "18.2.7",
+    "@types/node": "^20.6.2",
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "@types/three": "^0.186.0",
     "clsx": "^2.0.0",
     "colord": "^2.9.3",
-    "eslint": "8.49.0",
-    "eslint-config-next": "13.4.19",
-    "next": "16.0.10",
+    "next": "16.3.8",
+    "postprocessing": "^6.39.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sass": "^1.67.0",
-    "typescript": "5.2.2"
+    "three": "^0.186.1",
+    "typescript": "^5.2.2"
   }
 }

@@ -24,7 +24,7 @@ Produces a static export in the `dist/` directory.
 
 ### Linting
 
-The `yarn lint` script calls `next lint`, which was **removed in Next.js 16**. There is no standalone ESLint config file (`.eslintrc*` / `eslint.config.*`), so ESLint cannot run independently either. Lint is effectively not available until a config is added or the project migrates to a supported linting setup.
+There is no lint setup. The former `yarn lint` script and the `eslint` / `eslint-config-next` dependencies were removed, since `next lint` no longer exists in Next.js 16 and the repo has no ESLint config file. Use `npx tsc --noEmit` for type checking.
 
 ### Tests
 
