@@ -1,6 +1,11 @@
 .canvas {
   opacity: 0;
   animation: fadeIn 2s ease-in-out forwards;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+    opacity: 1;
+  }
 }
 
 @keyframes fadeIn {

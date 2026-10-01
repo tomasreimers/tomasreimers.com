@@ -7,8 +7,13 @@
 html,
 body {
   color: #98a5bf;
-  font-family: Helvetica, Arial, sans-serif;
-  line-height: auto;
+  // Font family is set by next/font (Lora) in layout.tsx
+  line-height: 1.65;
+
+  // Light-on-dark text gets artificially thickened by subpixel
+  // antialiasing; grayscale smoothing renders it crisper.
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
   min-width: 100vw;
   min-height: 100vh;
@@ -32,4 +37,9 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+::selection {
+  background: rgba(117, 133, 163, 0.4);
+  color: white;
 }
